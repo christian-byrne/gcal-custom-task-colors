@@ -1,6 +1,9 @@
-So you can set custom colors for GCal tasks and events. Custom colors match to keywords in the event/task name so you don't have to set the color manually whenever you create an event/task. Just add the key name in the event/task name somewhere. Set key/values in order of precedence/priority for subcategories.
+Set custom colors for GCal tasks and events. Custom colors match to keywords in the event/task name so you don't have to set the color manually whenever you create an event/task. Just add the key name in the event/task name somewhere. Set key/values in order of precedence/priority for subcategories.
 
 Speed could be improved. Please PR or use however you want.
+
+
+![example pic](wiki/Selection_007.png)
 
 ## Installation
 
@@ -30,6 +33,6 @@ Speed could be improved. Please PR or use however you want.
     }
       ```
 2. Go to url `chrome://extensions/`
-3. Enable `Developer mode`
+3. Enable `Developer mode` on that page
 4. `Load unpacked` and select this code's install directory
       

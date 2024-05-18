@@ -61,29 +61,29 @@ function addColorClassesToElements(courseArray) {
   }
 }
 
-
 setTimeout(function () {
   window.addEventListener("load", function () {
-    fetch(chrome.runtime.getURL("user-data/color-map.js"))
+    fetch(chrome.runtime.getURL("user-data/color-map.json"))
       .then((response) => response.json())
       .then((data) => {
         const styleEl = document.createElement("style");
         styleEl.textContent = mapUserColorsToCss(data);
         document.head.appendChild(styleEl);
+        console.log("Color map loaded", data);
+        const coursesWithLabels = [...Object.keys(data)];
+
+        // Initial (tasks are loaded asynchronously after short delay)
+        setTimeout(() => {
+          addColorClassesToElements(coursesWithLabels);
+        }, 800);
+
+        // Update every 2.4 seconds
+        setInterval(function () {
+          addColorClassesToElements(coursesWithLabels);
+        }, 2400);
       })
       .catch((err) => {
         console.error("Error loading color map", err);
       });
-    const coursesWithLabels = [...Object.keys(taskColorMappings)];
-
-    // Initial (tasks are loaded asynchronously after short delay)
-    setTimeout(() => {
-      addColorClassesToElements(coursesWithLabels);
-    }, 800);
-
-    // Update every 2.4 seconds
-    setInterval(function () {
-      addColorClassesToElements(coursesWithLabels);
-    }, 2400);
   });
 }, 600);
