@@ -69,7 +69,7 @@ setTimeout(function () {
         const styleEl = document.createElement("style");
         styleEl.textContent = mapUserColorsToCss(data);
         document.head.appendChild(styleEl);
-        console.log("Color map loaded", data);
+        console.log("Gcal Custom Task Colors: Color map loaded", data);
         const coursesWithLabels = [...Object.keys(data)];
 
         // Initial (tasks are loaded asynchronously after short delay)
@@ -83,7 +83,7 @@ setTimeout(function () {
         }, 2400);
       })
       .catch((err) => {
-        console.error("Error loading color map", err);
+        console.error("Gcal Custom Task Colors: Error loading color map", err);
       });
   });
 }, 600);

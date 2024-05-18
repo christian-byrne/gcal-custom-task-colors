@@ -22,17 +22,16 @@ Speed could be improved. Please PR or use however you want.
 
 #### Using a JS Injector Extension/Tool/Script
 
-1. Edit the attributes of `customColorMappings` in [js-injector-version.js](./js-injection-version.js) 
+1. Edit the attributes of `customColorMappings` in [js-injector-version.js](./js-injection-version.js). Use Hex colors only 
 2. Copy and paste code in [js-injector-version.js](./js-injection-version.js) into your JS Injector Extension/Tool/Script
 
 #### As a Chrome Extension
 
-1. Set key/values of color map in [user-data/color-map.json](./user-data/color-map.json)
+1. Set key/values of color map in [user-data/color-map.json](./user-data/color-map.json). Don't use color formats other than hexcodes
    ```json
     {
-      "Urgent" : "red",
-      "Critical" : "rgb(255, 0, 0)",
-      "Gardening": "lightgreen",
+      "Urgent" : "#EE4B2B",
+      "Critical" : "#FFA500",
       "Daily": "#BEBDBF",
       "Fitness": "#546E7A",
       "Pets": "#546E7A",
@@ -64,7 +63,7 @@ Speed could be improved. Please PR or use however you want.
 ##### As a Chrome Extension
 
 1. Go to the install directory of this code
-2. Set key/values of color map in [user-data/color-map.json](./user-data/color-map.json)
+2. Set key/values of color map in [user-data/color-map.json](./user-data/color-map.json). Make sure to use hexcodes for colors
 3. Go to url `chrome://extensions/`
 4. Click `Reload` or the reload icon button 🔄 on this extension
       

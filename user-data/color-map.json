@@ -1,7 +1,6 @@
 {
-  "Urgent" : "red",
-  "Critical" : "rgb(255, 0, 0)",
-  "Gardening": "lightgreen",
+  "Urgent": "#EE4B2B",
+  "Critical": "#FFA500",
   "Daily": "#BEBDBF",
   "Fitness": "#546E7A",
   "Pets": "#546E7A",
