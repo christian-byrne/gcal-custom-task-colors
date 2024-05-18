@@ -1,3 +1,6 @@
+const completedItemBgOpacity = 0.22;
+const completedItemTextOpacity = 0.18;
+
 function hexToRgba(hex, alpha) {
   hex = hex.replace("#", "");
 
@@ -25,8 +28,11 @@ function mapUserColorsToCss(userDict) {
       /* Completed ${formattedClassName} */
       span.UflSff.custom-taskcolor-${formattedClassName}, div.UflSff.custom-taskcolor-${formattedClassName} {
         /* On completed tasks, strikethrough the text and make text dark and semi-transparent */
-        background-color: ${hexToRgba(value, 0.24)} !important;
-        color:rgba(8, 8, 8, .78) !important;
+        background-color: ${hexToRgba(
+          value,
+          completedItemBgOpacity
+        )} !important;
+        color:rgba(8, 8, 8, ${completedItemTextOpacity}) !important;
         text-decoration: line-through !important;
       }
     `;
