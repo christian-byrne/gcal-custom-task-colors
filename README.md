@@ -2,8 +2,21 @@ Set custom colors for GCal tasks and events. Custom colors match to keywords in 
 
 Speed could be improved. Please PR or use however you want.
 
+***Table of Contents***
+- [Example](#example)
+- [Installation](#installation)
+    - [Using a JS Injector Extension/Tool/Script](#using-a-js-injector-extensiontoolscript)
+    - [As a Chrome Extension](#as-a-chrome-extension)
+- [Usage](#usage)
+  - [Updating/Changing Your Colors and Keywords](#updatingchanging-your-colors-and-keywords)
+      - [Using a JS Injector Extension/Tool/Script](#using-a-js-injector-extensiontoolscript-1)
+      - [As a Chrome Extension](#as-a-chrome-extension-1)
 
-![example pic](wiki/Selection_007.png)
+
+
+## Example
+
+![example pic](wiki/example-pic.png)
 
 ## Installation
 
@@ -17,6 +30,9 @@ Speed could be improved. Please PR or use however you want.
 1. Set key/values of color map in [user-data/color-map.json](./user-data/color-map.json)
    ```json
     {
+      "Urgent" : "red",
+      "Critical" : "rgb(255, 0, 0)",
+      "Gardening": "lightgreen",
       "Daily": "#BEBDBF",
       "Fitness": "#546E7A",
       "Pets": "#546E7A",
@@ -35,4 +51,20 @@ Speed could be improved. Please PR or use however you want.
 2. Go to url `chrome://extensions/`
 3. Enable `Developer mode` on that page
 4. `Load unpacked` and select this code's install directory
+
+
+## Usage
+
+### Updating/Changing Your Colors and Keywords
+
+##### Using a JS Injector Extension/Tool/Script
+
+1. Edit the attributes of `customColorMappings` in the code you injected.
+
+##### As a Chrome Extension
+
+1. Go to the install directory of this code
+2. Set key/values of color map in [user-data/color-map.json](./user-data/color-map.json)
+3. Go to url `chrome://extensions/`
+4. Click `Reload` or the reload icon button 🔄 on this extension
       
