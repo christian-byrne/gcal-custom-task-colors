@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Custom Gcal Task Colors",
+  "version": "1.0",
+  "background": {
+    "service_worker": "script.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["user-data/color-map.json"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "permissions": ["<all_urls>"]
+}
