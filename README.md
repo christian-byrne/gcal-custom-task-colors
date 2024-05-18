@@ -65,5 +65,5 @@ Speed could be improved. Please PR or use however you want.
 1. Go to the install directory of this code
 2. Set key/values of color map in [user-data/color-map.json](./user-data/color-map.json). Make sure to use hexcodes for colors
 3. Go to url `chrome://extensions/`
-4. Click `Reload` or the reload icon button 🔄 on this extension
+4. Click `Reload` (or the reload icon/button 🔄) on this extension
       
