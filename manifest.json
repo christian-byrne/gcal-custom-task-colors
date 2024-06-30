@@ -1,7 +1,15 @@
 {
   "manifest_version": 3,
   "name": "Custom Gcal Task Colors",
-  "version": "1.0",
+  "version": "1.1",
+  "content_security_policy": {
+ "script-src": "'self' https://cdnjs.cloudflare.com https://code.jquery.com",
+    "script-src-elem": "'self' https://cdnjs.cloudflare.com https://code.jquery.com"
+  },
+  "options_ui": {
+    "page": "options-modal/options.html",
+    "open_in_tab": true
+  },
   "description": "Customize the colors of your Google Calendar tasks",
   "permissions": ["storage", "activeTab"],
   "web_accessible_resources": [

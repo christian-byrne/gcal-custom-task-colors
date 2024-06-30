@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Gmail Task Color — Settings</title>
+    <link rel="stylesheet" href="options.css" />
+    <script src="../lib/jquery-3.7.1.min.js"></script>
+    <script src="../lib/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="../lib/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="col-md-12 p-4 mb-4">
+        <h1 class="display-1 mb-5 text-center dd3">Colors</h1>
+        <table class="table">
+          <thead>
+            <tr id="configTableHeaderRow"></tr>
+          </thead>
+          <tbody id="configTableBody"></tbody>
+        </table>
+        <div class="col-md-1 pull-right d-flex btn-row-bottom">
+          <button id="saveButton" class="btn btn-primary pull-right mx-2">
+            Save
+          </button>
+          <button
+            id="restoreDeletedButton"
+            class="btn btn-secondary pull-right"
+          >
+            Restore Deleted
+          </button>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <h1 class="display-1 mb-5 text-center dd3">Options</h1>
+        <table class="table">
+          <thead>
+            <tr id="optionsTableHeaderRow" class="text-center">
+              <th>Use Icons</th>
+              <th>Use Color Gradients</th>
+              <th>Refresh Interval (seconds)</th>
+              <th>Completed Tasks Opacity</th>
+              <th>Strikethrough Completed Task Text</th>
+            </tr>
+          </thead>
+          <tbody id="optionsTableBody">
+            <tr>
+              <td class="col-xs-3">
+                <input type="checkbox" class="form-control" id="useIcons" />
+              </td>
+
+              <td class="col-xs-3">
+                <input type="checkbox" class="form-control" id="useGradients" />
+              </td>
+              <td class="col-xs-5">
+                <input
+                  type="number"
+                  class="form-control editable"
+                  value=".02"
+                  min=".01"
+                  max="60"
+                  step=".01"
+                  id="refreshInterval"
+                />
+              </td>
+              <td class="col-xs-1">
+                <input
+                  type="number"
+                  class="form-control editable"
+                  value="0.22"
+                  min=".01"
+                  max="1.0"
+                  step=".01"
+                  id="completedOpacity"
+                />
+              </td>
+              <td class="col-xs-3">
+                <input
+                  type="checkbox"
+                  class="form-control"
+                  id="strikethroughCompleted"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="col-md-1 pull-right d-flex btn-row-bottom">
+          <button id="saveButtonConfig" class="btn btn-primary pull-right mx-2">
+            Save
+          </button>
+        </div>
+      </div>
+    </main>
+    <div
+      class="modal"
+      id="migrateModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="migrateModalTitle"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="migrateModalTitle">
+              Legacy Options Found
+            </h2>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <pre id="jsonLegacyOptions"></pre>
+            <p>
+              Import settings from color-map.json?
+
+              <span class="text-muted"
+                >This will only be asked once, or whenever you modify that json
+                file.</span
+              >
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              id="closeModalButton"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary" id="migrateButton">
+              Migrate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="options.js" charset="UTF-8"></script>
+  </body>
+</html>
